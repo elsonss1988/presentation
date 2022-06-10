@@ -1,13 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio,</title>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Portfolio</title>
 </head>
 <body>
-    <h1>Portfolio </h1>
-    <h3> Bem Vindo, estamos em Construçao</h3>
+    <header>
+        <div id="header">
+            <img src="./Imagens/img.png" alt="Author Logo">
+        </div>
+        <ul id="contatos">
+            <li>
+                <a target="_blank" href="https://www.linkedin.com/in/eng-elson/">
+                    <img src="./Imagens/in4.png">
+                </a>
+            </li>
+            <li>
+                <a target="_blank"  href="https://github.com/elsonss1988">
+                    <img src="./Imagens/github.png">
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:elsonss1988@gmail.com">
+                    <img src="./Imagens/mail2.png">
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/11966532405">
+                    <img src="./Imagens/w.png">
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section class="container">
+            <div class="name">
+                <h1 id="title-name">Elson Santos</h1>
+                <h5>Full Stack Developer</h5>
+            </div>
+
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-circle-arrow-down"></i>
+            </div>
+
+            <div style="display: none;" id="about">
+                <p> Desenvolvedor FullStack atuando 2 anos com desenvolvimento de front-end  e back-end 
+                    nas linguagens JavaScript e Java e também nos frameworks ReactJS e Spring.
+                    Conhecimentos também em C, Arduino, PHP, Figma e Cloud.
+                    Certificação AZ-900
+                </p>
+            </div>
+            <p>Deixe seu contato!</p>
+            <div class="form">
+                <form action="">
+                    <input type="text" placeholder="Digite seu melhor e-mail ">
+                    <button>Enviar !</button>
+                </form>
+            <div class="grid">
+                <div id="divA" class="column1" style="background-color:blue">A</div>
+                <div id="divB" class="column1" style="background-color:red">B</div>
+                <div id="divC" class="column1" style="background-color:yellow">C</div>
+                <div id="divD" class="column1" style="background-color:green">D</div>
+                <div id="divE" class="column2" style="background-color:greenyellow">E</div>
+                <div id="divF" class="column2" style="background-color:deepskyblue">F</div>
+                <div id="divH" class="column2" style="background-color:orange">H</div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var active = document.getElementById('about');
+            active.classList.toggle('active');
+        }
+    </script>
+
 </body>
 </html>
